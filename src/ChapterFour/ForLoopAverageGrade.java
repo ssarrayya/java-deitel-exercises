@@ -2,7 +2,7 @@ package ChapterFour;
 
 import java.util.Scanner;
 
-public class LoopAverage {
+public class ForLoopAverageGrade {
 
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
@@ -11,18 +11,16 @@ public class LoopAverage {
         int numberOfGrades = 0;
 
 
-        while(numberOfGrades < 3){
+        for( ; numberOfGrades < 10; numberOfGrades++){
             System.out.print("Enter student grade:  ");
             studentGrade = input.nextInt();
             totalGrade += studentGrade;
 
-            numberOfGrades++;
-
         }
-        //System.out.print(totalGrade);
+        System.out.print("The total grade is " + totalGrade);
 
         double averageGrade = totalGrade / (numberOfGrades * 1.0);
-        System.out.println(averageGrade);
+        System.out.println("The average grade is " + averageGrade);
 
     }
 
