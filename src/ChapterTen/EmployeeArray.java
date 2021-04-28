@@ -18,7 +18,7 @@ public class EmployeeArray {
 
         for (Employee employee : employees){
             System.out.println(employee);
-            System.out.println("earned #" + employee.earnings());
+            System.out.println(employee.earnings());
             System.out.println(" ");
         }
 
