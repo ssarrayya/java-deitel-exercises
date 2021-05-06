@@ -9,8 +9,8 @@ public class StringPalindrome {
     void checkIsPalindrome() {
         assertTrue(isPalindrome("radar"));
         assertTrue(isPalindrome("madam"));
-        assertTrue(isPalindrome("malam"));
-        assertFalse(isPalindrome("John"));
+        assertFalse(isPalindrome("Sarah"));
+        assertFalse(isPalindrome("atlas"));
     }
 
     public static boolean isPalindrome (String userInput) {
