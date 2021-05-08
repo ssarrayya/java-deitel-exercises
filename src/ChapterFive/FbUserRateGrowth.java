@@ -10,10 +10,9 @@ public class FbUserRateGrowth {
 
         for(; true; month++) {
             targetUserBase = (initialUserBase * Math.pow(1 + rateOfGrowth, month));
-            if (targetUserBase >= 1_500_000_000) {
+            if (targetUserBase >= 1500000000) {
                 break;
             }
-            initialUserBase = (int) targetUserBase;
         }
         System.out.println("It will take " + month + " months for Facebook to get to 1.5 billion users");
 
@@ -22,7 +21,6 @@ public class FbUserRateGrowth {
             if(secondTargetUserBase >= 2000000000){
                 break;
             }
-            initialUserBase = (int) secondTargetUserBase;
         }
         System.out.println("It will take " + month + " months for Facebook to get to 2 billion users");
     }
