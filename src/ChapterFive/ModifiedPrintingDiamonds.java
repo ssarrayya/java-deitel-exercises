@@ -24,6 +24,8 @@ public class ModifiedPrintingDiamonds {
                     stars -= 2;
                 }
             }
+        } else {
+            System.out.println("Enter an odd number less than 20");
         }
 
     }
