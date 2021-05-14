@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class GuessTheNumberModification {
     public static void main(String[] args) {
         SecureRandom srd = new SecureRandom();
-        int randomNumber = srd.nextInt(1000);
+        int randomNumber = 1 + srd.nextInt(1000);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Guess a number between 1 and 1000");
