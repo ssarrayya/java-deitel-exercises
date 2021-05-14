@@ -1,7 +1,7 @@
 package ChapterSix;
 
 public class CoordinatesDistance {
-    public void distance(double x1, double y1, double x2, double y2) {
+    public static void distance(double x1, double y1, double x2, double y2) {
         double horizontalDistance = x2 - x1;
         if(horizontalDistance < 0) { horizontalDistance *= -1; }
 
