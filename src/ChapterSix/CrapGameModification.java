@@ -16,8 +16,9 @@ public class CrapGameModification {
         int myPoint = 0;
         Status gameStatus;
         int sumOfDice = rollDice();
-        int wager = wagerPlacement();
         int bankBalance = 1000;
+        int wager = wagerPlacement(bankBalance);
+
 
         switch (sumOfDice) {
             case SEVEN, YO_LEVEN -> gameStatus = Status.WON;
@@ -63,12 +64,10 @@ public class CrapGameModification {
         return sum;
     }
 
-    public static int wagerPlacement() {
+    public static int wagerPlacement(int bankBalance) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a wager");
         int wager = scanner.nextInt();
-
-        int bankBalance = 1000;
 
         if(!(wager <= bankBalance)) {
             System.out.println("Reenter wager");
