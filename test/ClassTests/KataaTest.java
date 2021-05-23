@@ -22,13 +22,11 @@ public class KataaTest {
     void testThatArrayCanBeSortedInAscendingOrder() {
         Kataa.sortInAscendingOrder(originalArray);
         assertFalse(Arrays.equals(originalArray, secondArray));
-        System.out.println(Arrays.toString(originalArray));
     }
 
     @Test
     void testThatArrayCanBeSortedInDescendingOrder() {
         Kataa.sortInDescendingOrder(originalArray);
         assertFalse(Arrays.equals(originalArray, secondArray));
-        System.out.println(Arrays.toString(originalArray));
     }
 }
