@@ -3,8 +3,9 @@ package ChapterSeven;
 import ChapterSeven.exceptions.StackOverflowException;
 import ChapterSeven.exceptions.StackUnderflowException;
 
+import java.security.SecureRandom;
+
 public class CardDeck {
-    private int size;
     private Card[] cards;
     private int lastPushedLocation = -1;
 
@@ -53,4 +54,17 @@ public class CardDeck {
             return false;
         }
     }
+
+    public void shuffle() {
+        SecureRandom shuffler = new SecureRandom();
+        Card exchanger;
+
+        for (int i = 0; i < cards.length; i++) {
+            int index = shuffler.nextInt(cards.length);
+            exchanger = cards[i];
+            cards[i] = cards[index];
+            cards[index] = exchanger;
+        }
+    }
+
 }
