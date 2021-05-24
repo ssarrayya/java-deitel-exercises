@@ -16,4 +16,8 @@ public class CardGame {
     public int getNumberOfDealtCards() {
         return numberOfDealtCards;
     }
+
+    public void shuffle(CardDeck cardDeck) {
+        cardDeck.shuffle();
+    }
 }
