@@ -56,7 +56,6 @@ public class CardTest {
 
     @Test
     void barInvalidCardValuesFromBeingCreated() {
-        Card card = new Card(HEART, 13);
         assertThrows(InvalidCardValueException.class, ()-> new Card(HEART, 16));
     }
 }
