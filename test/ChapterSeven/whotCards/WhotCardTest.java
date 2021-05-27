@@ -39,6 +39,12 @@ public class WhotCardTest {
         assertSame(STAR, card.getSuit());
     }
 
+    @Test
+    void createWhotCards() {
+        card = WhotCard.createWhotCards(0);
+        assertSame(WHOT, card.getSuit());
+    }
+
 //    @Test
 //    void barInvalidCircleCardValuesFromBeingCreated() {
 //        assertThrows(InvalidCircleCardValueException.class, ()-> WhotCard.createCircleCardsWithValues(6));
