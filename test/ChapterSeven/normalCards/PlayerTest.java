@@ -1,8 +1,10 @@
-package ChapterSeven;
+package ChapterSeven.normalCards;
 
+import ChapterSeven.normalCards.Card;
+import ChapterSeven.normalCards.Player;
 import org.junit.jupiter.api.Test;
 
-import static ChapterSeven.Suits.DIAMOND;
+import static ChapterSeven.normalCards.Suits.DIAMOND;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerTest {
