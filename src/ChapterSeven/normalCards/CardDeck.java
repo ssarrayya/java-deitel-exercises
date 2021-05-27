@@ -1,12 +1,11 @@
-package ChapterSeven;
+package ChapterSeven.normalCards;
 
-import ChapterSeven.exceptions.StackOverflowException;
-import ChapterSeven.exceptions.StackUnderflowException;
-
+import ChapterSeven.normalCards.exceptions.StackOverflowException;
+import ChapterSeven.normalCards.exceptions.StackUnderflowException;
 import java.security.SecureRandom;
 
 public class CardDeck {
-    private Card[] cards;
+    private final Card[] cards;
     private int lastPushedLocation = -1;
 
     public CardDeck(int numberOfCards) {
@@ -33,38 +32,27 @@ public class CardDeck {
     }
 
     public Card pop() {
-        if(isEmpty()) {
-            throw new StackUnderflowException("Card deck is empty!");
-        }
+        if(isEmpty()) { throw new StackUnderflowException("Card deck is empty!"); }
         return cards[lastPushedLocation--];
     }
 
     public boolean isEmpty() {
-        if(lastPushedLocation == -1){
-            return true;
-        } else {
-            return false;
-        }
+        return lastPushedLocation == -1;
     }
 
     public boolean isFull() {
-        if(lastPushedLocation == getSize() - 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return lastPushedLocation == getSize() - 1;
     }
 
-    public void shuffle() {
+    public void shuffleCardDeck() {
         SecureRandom shuffler = new SecureRandom();
         Card exchanger;
 
         for (int i = 0; i < cards.length; i++) {
-            int index = shuffler.nextInt(cards.length);
+            int randomIndex = shuffler.nextInt(cards.length);
             exchanger = cards[i];
-            cards[i] = cards[index];
-            cards[index] = exchanger;
+            cards[i] = cards[randomIndex];
+            cards[randomIndex] = exchanger;
         }
     }
-
 }

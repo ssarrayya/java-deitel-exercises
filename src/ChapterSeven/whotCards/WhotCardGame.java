@@ -1,10 +1,11 @@
-package ChapterSeven;
+package ChapterSeven.whotCards;
 
-public class CardGame {
-    private int numberOfPlayers;
-    private int numberOfDealtCards;
+public class WhotCardGame {
 
-    public CardGame(int numberOfPlayers, int cardToDeal) {
+    private final int numberOfPlayers;
+    private final int numberOfDealtCards;
+
+    public WhotCardGame(int numberOfPlayers, int cardToDeal) {
         this.numberOfPlayers = numberOfPlayers;
         numberOfDealtCards = cardToDeal;
     }
@@ -15,9 +16,5 @@ public class CardGame {
 
     public int getNumberOfDealtCards() {
         return numberOfDealtCards;
-    }
-
-    public void shuffle(CardDeck cardDeck) {
-        cardDeck.shuffle();
     }
 }

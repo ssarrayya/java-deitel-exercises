@@ -1,6 +1,6 @@
-package ChapterSeven;
+package ChapterSeven.normalCards;
 
-import ChapterSeven.exceptions.InvalidCardValueException;
+import ChapterSeven.normalCards.exceptions.InvalidCardValueException;
 
 public class Card {
     private final Suits suit;
@@ -26,5 +26,17 @@ public class Card {
             case 13 -> "King";
             default -> "" + value;
         };
+    }
+
+    @Override
+    public String toString() {
+        return getValue() + " of " + suit.toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(!this.getClass().equals(obj.getClass())) { return true; }
+        Card cardToBeComparedWith = (Card) obj;
+        return this.value == cardToBeComparedWith.value || this.suit == cardToBeComparedWith.suit;
     }
 }

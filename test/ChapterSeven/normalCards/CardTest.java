@@ -58,4 +58,18 @@ public class CardTest {
     void barInvalidCardValuesFromBeingCreated() {
         assertThrows(InvalidCardValueException.class, ()-> new Card(HEART, 16));
     }
+
+    @Test
+    void testThatCardsWithSameCardValuesAreTheSameWhenCompared() {
+        Card firstCard = new Card(CLUB, 6);
+        Card secondCard = new Card(SPADE, 2);
+        assertEquals(firstCard, secondCard);
+    }
+
+    @Test
+    void testThatCardsWithSameFaceAreTheSameWhenCompared() {
+        Card firstCard = new Card(CLUB, 6);
+        Card secondCard = new Card(CLUB, 2);
+        assertEquals(firstCard, secondCard);
+    }
 }

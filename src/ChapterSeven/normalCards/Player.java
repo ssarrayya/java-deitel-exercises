@@ -1,4 +1,4 @@
-package ChapterSeven;
+package ChapterSeven.normalCards;
 
 import java.util.ArrayList;
 import java.util.List;

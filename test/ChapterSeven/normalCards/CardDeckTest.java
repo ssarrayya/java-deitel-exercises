@@ -61,4 +61,28 @@ public class CardDeckTest {
         assertTrue(cardDeck.isFull());
         assertThrows(StackOverflowException.class, ()->cardDeck.push(card));
     }
+
+    @Test
+    void testThatDeckCanBeShuffled() {
+        //create cards
+        Card firstCard = new Card(HEART, 2);
+        Card secondCard = new Card(DIAMOND, 5);
+        Card thirdCard = new Card(SPADE, 13);
+        Card fourthCard = new Card(CLUB, 4);
+        Card fifthCard = new Card(DIAMOND, 8);
+        //declare an array of cards created
+        Card[] cards = {firstCard, secondCard, thirdCard, fourthCard, fifthCard};
+
+        //push cards
+        for (Card i : cards) {
+            cardDeck.push(i);
+        }
+
+        //assert that the last card is the last card before shuffling
+        assertSame(fifthCard, cardDeck.peek());
+
+        cardDeck.shuffleCardDeck();
+        //assert that the last card is the last card after shuffling
+        assertNotSame(fifthCard, cardDeck.peek());
+    }
 }

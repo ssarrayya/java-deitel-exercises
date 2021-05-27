@@ -1,4 +1,4 @@
-package ChapterSeven.exceptions;
+package ChapterSeven.normalCards.exceptions;
 
 public class StackOverflowException extends CardGameException {
 
