@@ -1,11 +1,11 @@
-package ChapterSeven;
+package ChapterSeven.normalCards;
 
-import ChapterSeven.exceptions.StackOverflowException;
-import ChapterSeven.exceptions.StackUnderflowException;
+import ChapterSeven.normalCards.exceptions.StackOverflowException;
+import ChapterSeven.normalCards.exceptions.StackUnderflowException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static ChapterSeven.Suits.*;
+import static ChapterSeven.normalCards.Suits.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CardDeckTest {
