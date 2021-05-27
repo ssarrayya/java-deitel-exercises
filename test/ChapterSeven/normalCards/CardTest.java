@@ -1,8 +1,8 @@
-package ChapterSeven;
+package ChapterSeven.normalCards;
 
-import ChapterSeven.exceptions.InvalidCardValueException;
+import ChapterSeven.normalCards.exceptions.InvalidCardValueException;
 import org.junit.jupiter.api.Test;
-import static ChapterSeven.Suits.*;
+import static ChapterSeven.normalCards.Suits.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CardTest {
