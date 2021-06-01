@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class Computer_AidedInstruction {
-    private static SecureRandom digitGenerator = new SecureRandom();
+    private static final SecureRandom digitGenerator = new SecureRandom();
     private static int studentAnswer;
     private static int correctAnswer;
     private static int firstDigit;
@@ -47,7 +47,6 @@ public class Computer_AidedInstruction {
         basicMultiplication();
         compareAnswer();
 
-        int counter = 1;
         while(studentAnswer == correctAnswer) {
             firstDigit();
             secondDigit();
@@ -55,9 +54,8 @@ public class Computer_AidedInstruction {
             collectStudentAnswer();
             basicMultiplication();
             compareAnswer();
-
-            counter++;
         }
+
         while (studentAnswer != correctAnswer){
             collectStudentAnswer();
             compareAnswer();
