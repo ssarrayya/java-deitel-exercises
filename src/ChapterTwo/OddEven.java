@@ -10,10 +10,10 @@ public class OddEven{
 		System.out.print("Enter an number: ");
 		userNumber = input.nextInt();
 		
-		if((userNumber/2) == 0)
+		if((userNumber % 2) == 0)
 			System.out.println("This is an even number");
 
-		if((userNumber/2) != 0)
+		if((userNumber % 2) != 0)
 			System.out.println("This is an odd number");
 	}
 
