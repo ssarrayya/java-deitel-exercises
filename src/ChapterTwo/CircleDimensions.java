@@ -11,15 +11,8 @@ public class CircleDimensions{
 		System.out.println("Enter radius of circle :");
 		radius = input.nextInt();
 
-		int diameter = 2 * radius;
-		System.out.println("The diameter is " + diameter);
-
-		double circumference = 2 * Math.PI * radius;
-		System.out.println("The circumference is " + circumference);
-
-		double area = Math.PI * radius * radius;
-		System.out.println("The area is " + area);
+		System.out.printf("%s%d%n", "The diameter is ", 2 * radius);
+		System.out.printf("%s%f%n", "The circumference is ", 2 * Math.PI * radius);
+		System.out.printf("%s%f%n", "The area is ", Math.PI * radius * radius);
 	}
-
-
 }
