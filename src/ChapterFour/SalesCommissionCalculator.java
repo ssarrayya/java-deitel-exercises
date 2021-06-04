@@ -7,17 +7,19 @@ public class SalesCommissionCalculator {
         Scanner input = new Scanner(System.in);
 
         int normalPay = 200;
-        int grossSales;
+        int grossSales = 0;
         double totalEarning;
+        int itemsSold = 1;
 
-        System.out.println("Enter salesperson's gross sales: ");
-        grossSales = input.nextInt();
-
-        if(grossSales > 0) {
+        System.out.println("Enter cost of items sold by salesperson: ");
+        double itemCost = input.nextDouble();
+        while(itemCost > 0) {
+            System.out.println("Enter cost of items sold by salesperson: ");
+            itemCost = input.nextDouble();
+            grossSales += itemCost;
+            itemsSold++;
+        }
             totalEarning = normalPay + (0.09 * grossSales);
             System.out.println("Salesperson's total earning is " + totalEarning);
-        }
-
-
     }
 }
