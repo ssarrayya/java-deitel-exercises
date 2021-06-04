@@ -7,7 +7,7 @@ public class CreditLimitCalculator {
         Scanner input = new Scanner(System.in);
 
         int accountNumber;
-        int beginningBalance;
+        int balance;
         int totalCharges;
         int totalCredits;
         int creditLimit;
@@ -16,7 +16,7 @@ public class CreditLimitCalculator {
         accountNumber = input.nextInt();
 
         System.out.println("Enter customer's beginning balance: ");
-        beginningBalance = input.nextInt();
+        balance = input.nextInt();
 
         System.out.println("Enter total of all items charged by customer this month: ");
         totalCharges = input.nextInt();
@@ -27,10 +27,12 @@ public class CreditLimitCalculator {
         System.out.println("Enter credit limit applicable to customer: ");
         creditLimit = input.nextInt();
 
-        int newBalance = beginningBalance + totalCredits - totalCharges;
-        System.out.println("The customer's new balance is " + newBalance);
+        while (creditLimit > balance) {
+            balance += totalCredits - totalCharges;
+            System.out.println("The customer's new balance is " + balance);
+        }
 
-        if(newBalance > creditLimit)
+        if(balance > creditLimit)
             System.out.println("Credit Limit Exceeded!");
     }
 }
