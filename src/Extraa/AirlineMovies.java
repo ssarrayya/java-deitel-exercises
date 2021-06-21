@@ -18,14 +18,16 @@ public class AirlineMovies {
     static int[] movieLength = {20, 100, 50, 20, 30, 70, 10};
 
     public static boolean isSumEqualToFlightLength() {
+        boolean isSumEqual = false;
         for(int i = 0; i < movieLength.length; i++){
             for(int j = i + 1; j < movieLength.length; j++){
-                if(movieLength[i] + movieLength[j] == flightLength){
-                    return true;
+                if (movieLength[i] + movieLength[j] == flightLength) {
+                    isSumEqual = true;
+                    break;
                 }
             }
         }
-        return false;
+        return isSumEqual;
     }
 
     //to tell user what movies are equal to the flight length
