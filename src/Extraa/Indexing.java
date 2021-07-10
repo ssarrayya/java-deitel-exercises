@@ -1,6 +1,10 @@
 package Extraa;
 
 public class Indexing {
+//    Given an unsorted array nums, write a function to find the start and end positions of a given
+//    number val in the array after sorting it. Your function should return [-1, -1] if val isn't
+//    found in the array
+
     public static int[] sort() {
         int[] nums = {0, 8, -2, 5, 0};
         int temp;
