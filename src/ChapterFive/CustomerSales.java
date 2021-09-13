@@ -53,7 +53,6 @@ public class CustomerSales {
                     System.out.println(totalQuantitySold);
                     break;
                 default:
-                    if (userInput < 0 || userInput > 5)
                     System.out.println("Enter a valid input");
             }
             System.out.println(prompt);

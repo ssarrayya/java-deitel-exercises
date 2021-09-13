@@ -5,29 +5,25 @@ import java.util.Scanner;
 
 public class CrapGameModification {
     private static final SecureRandom randomNumbers = new SecureRandom();
-    private enum Status {CONTINUE, WON, LOST}
-    private static final int SNAKE_EYES = 2;
-    private static final int TREY = 3;
-    private static final int SEVEN = 7;
-    private static final int YO_LEVEN = 11;
-    private static final int BOX_CARS = 12;
+    private enum Status {NEW, CONTINUE, WON, LOST}
 
     public static void main(String[] args) {
         int myPoint = 0;
-        Status gameStatus;
+        Status gameStatus = Status.NEW;
         int sumOfDice = rollDice();
         int bankBalance = 1000;
         int wager = wagerPlacement(bankBalance);
 
-
-        switch (sumOfDice) {
-            case SEVEN, YO_LEVEN -> gameStatus = Status.WON;
-            case SNAKE_EYES, TREY, BOX_CARS -> gameStatus = Status.LOST;
-            default -> {
-                gameStatus = Status.CONTINUE;
-                myPoint = sumOfDice;
-                System.out.printf("Point is %d%n", myPoint);
+        if (gameStatus == Status.NEW) {
+            if (sumOfDice == 7 || sumOfDice == 11) {
+                gameStatus = Status.WON;
+            } else if (sumOfDice == 2 || sumOfDice == 3 || sumOfDice == 12) {
+                gameStatus = Status.LOST;
             }
+            gameStatus = Status.CONTINUE;
+        } else {
+            myPoint = sumOfDice;
+            System.out.printf("Point is %d%n", myPoint);
         }
 
         while (gameStatus == Status.CONTINUE) {
@@ -35,7 +31,7 @@ public class CrapGameModification {
             // determine game status
             if (sumOfDice == myPoint) {
                 gameStatus = Status.WON;
-            } else if (sumOfDice == SEVEN) {
+            } else if (sumOfDice == 7) {
                 gameStatus = Status.LOST;
             }
         }

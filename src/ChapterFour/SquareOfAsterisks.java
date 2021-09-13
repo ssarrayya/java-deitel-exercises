@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class SquareOfAsterisks {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         int side = input.nextInt();
         int lines = side;
 

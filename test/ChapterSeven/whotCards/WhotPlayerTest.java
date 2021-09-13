@@ -15,5 +15,6 @@ public class WhotPlayerTest {
         WhotPlayer player = new WhotPlayer("Jaden");
         WhotCard card = WhotCard.createCrossCardsWithValues(2);
         player.addCard(card);
+        assertEquals(1, player.getNumberOfCards());
     }
 }

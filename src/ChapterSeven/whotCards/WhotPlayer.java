@@ -20,4 +20,8 @@ public class WhotPlayer {
     public void addCard(WhotCard card) {
         cards.add(card);
     }
+
+    public int getNumberOfCards() {
+        return cards.size();
+    }
 }

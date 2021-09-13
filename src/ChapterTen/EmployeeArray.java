@@ -6,7 +6,7 @@ public class EmployeeArray {
         CommissionEmployee commissionEmployee = new CommissionEmployee("Nnenna", "Onwuka", "100024", 60.0, 0.5);
         BasePlusCommissionEmployee basePlusCommissionEmployee = new BasePlusCommissionEmployee("Mayowa", "Owolabi", "100025", 60.0, 0.5, 100.0);
         HourlyEmployee hourlyEmployee = new HourlyEmployee("Francis", "Obi", "100026", 30.0, 2);
-            PieceWorker pieceWorker = new PieceWorker("Priscilla", "Akinkunmi", "100027", 30.0, 20);
+        PieceWorker pieceWorker = new PieceWorker("Priscilla", "Akinkunmi", "100027", 30.0, 20);
 
         Employee[] employees = new Employee[5];
 

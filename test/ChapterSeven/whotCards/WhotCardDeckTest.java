@@ -2,38 +2,41 @@ package ChapterSeven.whotCards;
 
 import ChapterSeven.whotCards.exceptionss.StackOverflowException;
 import ChapterSeven.whotCards.exceptionss.StackUnderflowException;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 public class WhotCardDeckTest {
-    private WhotCardDeck cardDeck;
+    private static WhotCardDeck cardDeck;
 
-    @BeforeEach
-    void setUp() {
-        cardDeck = new WhotCardDeck(6);
+    @Test
+    void testThatCardDeckCanBeFilled() {
+        WhotCardDeck.cardDeckCanBeFilled();
+        assertTrue(WhotCardDeck.isFull());
     }
+
     @Test
     void testThatCardDeckHasAFixedSize() {
-        assertEquals(6, cardDeck.getSize());
+        cardDeck = new WhotCardDeck(6);
+        assertEquals(6, WhotCardDeck.getSize());
     }
 
     @Test
     void pushOnce_confirmThatCardPushedLastIsAtTop() {
+        cardDeck = new WhotCardDeck(6);
         WhotCard card = WhotCard.createCrossCardsWithValues(2);
-        cardDeck.push(card);
+        WhotCardDeck.push(card);
         assertSame(card, cardDeck.peek());
     }
 
     @Test
     void pushTwice_popAndConfirmThatCardPushedLastIsAtTop() {
+        cardDeck = new WhotCardDeck(2);
         WhotCard firstCard = WhotCard.createCrossCardsWithValues(2);
         WhotCard secondCard = WhotCard.createTriangleCardsWithValues(2);
 
-        cardDeck.push(firstCard);
-        cardDeck.push(secondCard);
+        WhotCardDeck.push(firstCard);
+        WhotCardDeck.push(secondCard);
         WhotCard poppedCard = cardDeck.pop();
 
         assertSame(secondCard, poppedCard);
@@ -54,12 +57,13 @@ public class WhotCardDeckTest {
 
     @Test
     void testThatIfDeckIsFull_pushWillThrowStackOverflowException() {
+        cardDeck = new WhotCardDeck(6);
         WhotCard card = WhotCard.createCrossCardsWithValues(2);
         for (int i = 0; i < 6; i++) {
-            cardDeck.push(card);
+            WhotCardDeck.push(card);
         }
-        assertTrue(cardDeck.isFull());
-        assertThrows(StackOverflowException.class, ()->cardDeck.push(card));
+        assertTrue(WhotCardDeck.isFull());
+        assertThrows(StackOverflowException.class, ()-> WhotCardDeck.push(card));
     }
 
     @Test
@@ -76,7 +80,7 @@ public class WhotCardDeckTest {
 
         //push cards
         for (WhotCard i : cards) {
-            cardDeck.push(i);
+            WhotCardDeck.push(i);
         }
 
         //assert that the last card is the last card before shuffling

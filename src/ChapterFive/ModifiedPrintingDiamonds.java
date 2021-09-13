@@ -5,10 +5,9 @@ public class ModifiedPrintingDiamonds {
         if (userInput > 0 && userInput < 20 && userInput % 2 != 0) {
             int spaces = userInput;
             int stars = 1;
-            int lines = userInput;
-            int div = lines / 2 + 1;
+             int div = userInput / 2 + 1;
 
-            for (int i = 1; i <= lines; i++) {
+            for (int i = 1; i <= userInput; i++) {
                 for (int s = spaces; s > 0; s--) {
                     System.out.print(" ");
                 }

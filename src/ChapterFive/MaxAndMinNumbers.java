@@ -8,7 +8,6 @@ public class MaxAndMinNumbers {
 
         int firstRandomNumber;
         int randomNumber = 0;
-        int counter = 0;
 
         System.out.println("Enter a number: ");
         firstRandomNumber = userInput.nextInt();

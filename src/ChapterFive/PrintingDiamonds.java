@@ -33,7 +33,5 @@ public class PrintingDiamonds {
                 space += 2;
                 star -= 2;
             }
-
-
     }
 }

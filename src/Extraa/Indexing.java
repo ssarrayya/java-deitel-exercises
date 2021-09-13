@@ -25,7 +25,7 @@ public class Indexing {
 
     public static void positioning() {
         int[] nums = sort();
-        int val = 3;
+        int val = 0;
         System.out.println();
         for(int i = 0; i < nums.length; i++) {
             if(val == nums[i]) {

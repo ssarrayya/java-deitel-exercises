@@ -15,6 +15,6 @@ class ModifiedPrintingDiamondsTest {
 
     @Test
     void testThatApplicationCanPrintDiamondsAccordingToSize(){
-        pd.printDiamond(6);
+        pd.printDiamond(18);
     }
 }

@@ -1,7 +1,5 @@
 package ChapterFive;
 
-import java.util.Scanner;
-
 public class ModifiedCompoundInterest {
     public static void main(String[] args) {
         double amount;

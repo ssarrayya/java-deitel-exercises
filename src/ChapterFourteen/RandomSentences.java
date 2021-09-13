@@ -3,7 +3,6 @@ package ChapterFourteen;
 import org.junit.jupiter.api.Test;
 
 import java.security.SecureRandom;
-import java.util.Locale;
 
 public class RandomSentences {
     @Test

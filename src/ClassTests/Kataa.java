@@ -35,7 +35,7 @@ public class Kataa {
                 if(originalArray[j] > originalArray[i]){
                     largerNumber = originalArray[i];
                     originalArray[i] = originalArray[j];
-                    originalArray[j] = largerNumber;
+                    originalArray[j] = largerNumber ;
                 }
             }
         }

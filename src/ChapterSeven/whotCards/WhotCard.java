@@ -35,6 +35,10 @@ public class WhotCard {
         return new WhotCard(CIRCLE, value);
     }
 
+    public static WhotCard createWhotCards(int value) {
+        return new WhotCard(WHOT, value);
+    }
+
     @Override
     public String toString() {
         return value + " of " + whotSuit.toString();

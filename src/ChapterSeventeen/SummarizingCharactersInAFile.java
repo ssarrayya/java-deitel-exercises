@@ -14,24 +14,21 @@ public class SummarizingCharactersInAFile {
 
         Map<String, Long> wordCounts =
                 Files.lines(Paths.get("C:\\Users\\DELL\\OneDrive\\Documents\\test.txt"))
-                        .map(line -> line.replaceAll("(['\"<>.,(){}]?!\\p{P})[\\s+]", ""))
-                        .flatMap(line -> pattern.splitAsStream(line))
-                        .collect(Collectors.groupingBy(String::toLowerCase,
-                                TreeMap::new, Collectors.counting())
-                        );
+                                 .map(line -> line.replaceAll("(['\"<>.,(){}]?!\\p{P})[\\s+]", ""))
+                                 .flatMap(line -> pattern.splitAsStream(line))
+                                 .collect(Collectors.groupingBy(String::toLowerCase,
+                                        TreeMap::new, Collectors.counting())
+                                 );
 
         wordCounts.entrySet()
-                .stream()
-                .collect(
-                        Collectors.groupingBy(entry -> entry.getKey().charAt(0),
-                                TreeMap::new, Collectors.toList()))
-                .forEach((character, wordList) ->
-                {
-                    System.out.printf("%n%C%n", character);
-                    wordList.stream().forEach(word -> System.out.printf(
-                            "%13s: %d%n", word.getKey(), word.getValue()));
-                });
-
-
+                  .stream()
+                  .collect(
+                          Collectors.groupingBy(entry -> entry.getKey().charAt(0),
+                                  TreeMap::new, Collectors.toList()))
+                  .forEach((character, wordList) ->
+                  {
+                      System.out.printf("%n%C%n", character);
+                      wordList.stream().forEach(word -> System.out.printf("%13s: %d%n", word.getKey(), word.getValue()));
+                  });
     }
 }

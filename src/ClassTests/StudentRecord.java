@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class StudentRecord {
     public static void createStudentFileAndAddRecords() {
-        try(Formatter formatter = new Formatter("students_record.txt"); Scanner input = new Scanner(System.in)) {
+        try(Formatter formatter = new Formatter("C:\\Users\\DELL\\IdeaProjects\\deitel-exercise\\src\\ClassTest\\students_record.txt"); Scanner input = new Scanner(System.in)) {
             System.out.println("Enter students record and Enter + Ctrl + D to terminate program");
             formatter.format("%s %s %s %s %s %n", "Firstname", "Lastname", "level", "Year of birth", " Age");
 
@@ -18,9 +18,8 @@ public class StudentRecord {
                 int yearOfBirth = input.nextInt();
                 formatter.format("%s %s %d %d %d%n", firstname, lastname, level, yearOfBirth, LocalDate.now().getYear() - yearOfBirth);
             }
-        }
-            catch (FileNotFoundException e) {
-            System.err.println("Error opening file. Terminating this process.");
+        } catch (FileNotFoundException e) {
+            System.err.println("Error opening file. Terminating this process...");
             System.exit(1);
         }
     }

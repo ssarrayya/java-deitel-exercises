@@ -2,7 +2,7 @@ package ChapterFour;
 
 import java.util.Scanner;
 
-public class Encrypter {
+public class Encryptor {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a four-digit number: ");
