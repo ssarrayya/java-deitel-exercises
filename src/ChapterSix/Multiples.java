@@ -2,11 +2,7 @@ package ChapterSix;
 
 public class Multiples {
     public static boolean isMultiple(int firstNumber, int secondNumber) {
-        boolean multiple = false;
-        if(secondNumber % firstNumber == 0) {
-            multiple = true;
-        }
-        return multiple;
+        return secondNumber % firstNumber == 0;
     }
 
     public static void main(String[] args) {
