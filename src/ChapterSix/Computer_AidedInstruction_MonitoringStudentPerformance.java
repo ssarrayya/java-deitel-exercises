@@ -60,13 +60,6 @@ public class Computer_AidedInstruction_MonitoringStudentPerformance {
     }
 
     public static void main(String[] args) {
-        firstDigit();
-        secondDigit();
-        displayQuestion();
-        collectStudentAnswer();
-        basicMultiplication();
-        compareAnswer();
-
         int percentageAnswer = 0;
 
         for (int i = 1; i <= 10; i++) {
