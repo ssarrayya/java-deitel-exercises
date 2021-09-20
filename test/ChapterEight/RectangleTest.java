@@ -16,8 +16,8 @@ public class RectangleTest {
 
     @Test
     void createARectangle() {
-        assertEquals(rectangle.width, 1);
-        assertEquals(rectangle.length, 1);
+        assertEquals(1, rectangle.getWidth());
+        assertEquals(1, rectangle.getLength());
     }
 
     @Test
