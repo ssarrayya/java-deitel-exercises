@@ -8,7 +8,7 @@ public class Exponentiation {
             result *= base;
         }
 
-        System.out.printf("%d", result);;
+        System.out.printf("%d", result);
     }
 
     public static void main(String[] args) {
