@@ -1,10 +1,8 @@
 package ChapterEight;
 
 public class Rectangle {
-    float length = 1;
-    float width = 1;
-    float perimeter;
-    float area;
+    private float length = 1;
+    private float width = 1;
 
     public float getLength() {
         return length;
@@ -27,10 +25,10 @@ public class Rectangle {
     }
 
     public float calculatePerimeter(float length, float width) {
-        return perimeter = 2 * (length + width);
+        return 2 * (length + width);
     }
 
     public float calculateArea(float length, float width) {
-        return area = length * width;
+        return length * width;
     }
 }
