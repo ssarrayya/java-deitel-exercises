@@ -9,9 +9,11 @@ public class Rectangle {
     }
 
     public void setLength(float length) {
-        if(length > 0.0 && length < 20.0) {
-            this.length = length;
+        if(length < 0.0 || length > 20.0) {
+            throw new IllegalArgumentException("Length is between 0 - 20");
         }
+        this.length = length;
+
     }
 
     public float getWidth() {
@@ -19,9 +21,10 @@ public class Rectangle {
     }
 
     public void setWidth(float width) {
-        if(length > 0.0 && length < 20.0) {
-            this.width = width;
+        if(width < 0.0 || width > 20.0) {
+            throw new IllegalArgumentException("Width is between 0 - 20");
         }
+        this.width = width;
     }
 
     public float calculatePerimeter(float length, float width) {
