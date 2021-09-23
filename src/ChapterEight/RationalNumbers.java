@@ -1,21 +1,31 @@
 package ChapterEight;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+import ChapterSix.GreatestCommonDivisor;
+
 public class RationalNumbers {
-    private int numerator;
-    private int denominator;
+    private final int numerator;
+    private final int denominator;
 
     public RationalNumbers (int numerator, int denominator) {
-        if(denominator % numerator == 0) {
-            this.numerator = 1;
-            this.denominator = denominator / numerator;
-        } else {
-            this.numerator = numerator;
-            this.denominator = denominator;
-        }
+        int gcd = GreatestCommonDivisor.gcd(numerator, denominator);
+
+        this.numerator = numerator / gcd;
+        this.denominator = denominator / gcd;
     }
 
     public RationalNumbers () {
         this(1, 1);
+    }
+
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
     }
 
     public static RationalNumbers addition (RationalNumbers rn1, RationalNumbers rn2) {
@@ -37,5 +47,12 @@ public class RationalNumbers {
     @Override
     public String toString() {
         return String.format("%d / %d", numerator, denominator);
+    }
+
+    public String toFloatFormat(int scale, RationalNumbers rn) {
+        float a = (float) rn.getNumerator() / rn.getDenominator();
+        String floatAnswer = String.valueOf(a);
+        BigDecimal bd = new BigDecimal(floatAnswer);
+        return String.valueOf(bd.setScale(scale, RoundingMode.HALF_DOWN));
     }
 }
