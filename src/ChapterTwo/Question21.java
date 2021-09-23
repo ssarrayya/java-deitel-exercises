@@ -1,3 +1,12 @@
+/*
+	2.21 What does the following code print?
+System.out.print("*");
+System.out.print("***");
+System.out.print("*****");
+System.out.print("****");
+System.out.println("**");
+ */
+
 package ChapterTwo;
 
 public class Question21{
