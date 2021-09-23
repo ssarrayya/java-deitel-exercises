@@ -1,3 +1,7 @@
+/*
+4.26 What does the following program print?
+ */
+
 package ChapterFour;
 
 public class Mystery3 {

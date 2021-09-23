@@ -2,7 +2,7 @@ package ChapterFour;
 
 public class EConstantFactorialTest {
     public static void main(String[] args) {
-        EConstantFactorial calculateE = new EConstantFactorial();
-        System.out.println("The value of e is " + calculateE.getEConstant(7));
+        System.out.printf("%s%f%n", "The value of e is ", EConstantFactorial.getEConstant(3));
+        System.out.printf("%s%f", "The value of e^(2) is ", EConstantFactorial.getEConstantToAPower(3, 2));
     }
 }
