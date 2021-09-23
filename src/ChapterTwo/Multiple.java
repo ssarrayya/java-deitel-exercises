@@ -1,4 +1,10 @@
+/*
+	2.26 (Multiples) Write an application that reads two integers, determines whether the first is a
+		multiple of the second and prints the result. [Hint: Use the remainder operator.]
+ */
+
 package ChapterTwo;
+
 
 import java.util.Scanner;
 
