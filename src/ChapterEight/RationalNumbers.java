@@ -49,8 +49,8 @@ public class RationalNumbers {
         return String.format("%d / %d", numerator, denominator);
     }
 
-    public String toFloatFormat(int scale, RationalNumbers rn) {
-        float a = (float) rn.getNumerator() / rn.getDenominator();
+    public String toFloatFormat(int scale) {
+        float a = (float) getNumerator() / getDenominator();
         String floatAnswer = String.valueOf(a);
         BigDecimal bd = new BigDecimal(floatAnswer);
         return String.valueOf(bd.setScale(scale, RoundingMode.HALF_DOWN));
