@@ -1,3 +1,9 @@
+/*
+7.15 (Command-Line Arguments) Rewrite Fig. 7.2 so that the size of the array is specified by the
+first command-line argument. If no command-line argument is supplied, use 10 as the default size
+of the array.
+ */
+
 package ChapterSeven;
 
 public class CommandLineArgument {//skipped 7.16 and 7.16. TODO later
