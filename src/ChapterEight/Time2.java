@@ -29,7 +29,7 @@ public class Time2 {
     }
 
     public Time2(Time2 time) {
-        this(time.getHour(), time.getMinute(), time.getSecond());
+        this(time.getSecond());
     }
 
     public void setTime(int hour, int minute, int second) {
@@ -72,11 +72,10 @@ public class Time2 {
     }
 
     public String toUniversalString() {
-        return String.format("%02d:%02d:%02d", getHour(), getMinute(), getSecond());
+        return String.format("%02d", getSecond());
     }
 
     public String toString() {
-        return String.format("%d:%02d:%02d %s", ((getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12),
-                getMinute(), getSecond(), (getHour() < 12 ? "AM" : "PM"));
+        return String.format("%02d %s", getSecond(), (getSecond() < 43200 ? "AM" : "PM"));
     }
 }

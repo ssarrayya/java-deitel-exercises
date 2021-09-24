@@ -1,3 +1,19 @@
+/*
+As computer costs decline, it becomes feasible for every student, regardless of economic circumstance,
+to have a computer and use it in school. This creates exciting possibilities for improving the
+educational experience of all students worldwide, as suggested by the next five exercises. [Note:
+Check out initiatives such as the One Laptop Per Child Project (www.laptop.org). Also, research
+“green” laptops—what are some key “going green” characteristics of these devices? Look into the
+Electronic Product Environmental Assessment Tool (www.epeat.net), which can help you assess
+the “greenness” of desktops, notebooks and monitors to help you decide which products to purchase.]
+
+ 6.38 (Computer-Assisted Instruction: Difficulty Levels) Exercises 6.35–6.37 developed a
+ computer-assisted instruction program to help teach an elementary school student multiplication.
+ Modify the program to allow the user to enter a difficulty level. At a difficulty level of 1, the program
+should use only single-digit numbers in the problems; at a difficulty level of 2, numbers as large as
+two digits, and so on.
+ */
+
 package ChapterSix;
 
 import java.security.SecureRandom;
