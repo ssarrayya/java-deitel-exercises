@@ -13,6 +13,6 @@ public class CommissionEmployeeTest {
                 employee.setGrossSales(20000);
                 employee.setCommissionRate(.1);
                 System.out.println();
-                System.out.printf("%s%sn", "Updated employee information obtained by toString", employee);
+                System.out.printf("%s%s", "Updated employee information obtained by toString", employee);
         }
 }
