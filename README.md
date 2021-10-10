@@ -11,7 +11,8 @@ My solutions to some exercises in the textbook above as well as class exercises,
 - [Chapter 6: Methods: A Deeper Look](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter6)
 - [Chapter 7: Arrays and Arraylists](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter7)
 - [Chapter 8: Classes and Objects: A Deeper Look](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter8)
-- [Chapter 9: Object- Oriented Programming: Inheritance](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter9)
+- [Chapter 9: Object-Oriented Programming: Inheritance](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter9)
+- [Chapter 10: Object-Oriented Programming: Polymorphism and Interfaces](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter10)
 
 ## Others
 - [Take home assignments](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/assignments)
