@@ -41,8 +41,10 @@ public class HourlyEmployee extends Employee{
     public double earnings() {
         int maxHours = 40;
         double overTime = 1.5;
-        double earnings = hours * wages;
-        if(hours > maxHours) {
+        double earnings;
+        if(hours <= 40) {
+            earnings = hours * wages;
+        } else {
             earnings = (hours - maxHours) * overTime * wages + (maxHours * wages);
         }
         return earnings;
