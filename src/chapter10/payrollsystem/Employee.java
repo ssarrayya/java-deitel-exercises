@@ -46,5 +46,7 @@ public abstract class Employee implements Payable{
                 getFirstName(), getLastName(), getBirthDate(), getSocialSecurityNumber());
     }
     public abstract double earnings();
-    public abstract double getPaymentAmount();
+    public double getPaymentAmount() {
+        return earnings();
+    }
 }
