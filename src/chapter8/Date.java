@@ -80,9 +80,8 @@ public class Date {
     @Override
     public String toString() {
         return String.format(
-                "%02d/%02d/%d%n%s %02d, %d%n%d %d",
+                "%02d/%02d/%d%n%s %02d, %d",
                 month, day, year,
-                this.MONTHS[month - 1], day, year,
-                dayNumberInYear, year);
+                this.MONTHS[month - 1], day, year);
     }
 }
