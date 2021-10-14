@@ -11,7 +11,7 @@ to store references to the various employee objects. In a loop, calculate the pa
 in which the Employee’s birthday occurs.
  */
 
-public abstract class Employee {
+public abstract class Employee implements Payable{
     private final String firstName;
     private final String lastName;
     private final Date birthDate;
@@ -46,4 +46,5 @@ public abstract class Employee {
                 getFirstName(), getLastName(), getBirthDate(), getSocialSecurityNumber());
     }
     public abstract double earnings();
+    public abstract double getPaymentAmount();
 }

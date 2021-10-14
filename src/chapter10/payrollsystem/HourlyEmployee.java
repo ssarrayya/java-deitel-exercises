@@ -40,7 +40,6 @@ public class HourlyEmployee extends Employee{
         return hours;
     }
 
-    @Override
     public double earnings() {
         if (getHours() <= 40) // no overtime
             return getWage() * getHours();
@@ -54,5 +53,10 @@ public class HourlyEmployee extends Employee{
         return String.format("hourly employee: %s%n%s: $%,.2f; %s: %,.2f",
                 super.toString(), "hourly wage", getWage(),
                 "hours worked", getHours());
+    }
+
+    @Override
+    public double getPaymentAmount() {
+        return earnings();
     }
 }

@@ -38,7 +38,6 @@ public class PieceWorker extends Employee {
         return pieces;
     }
 
-    @Override
     public double earnings() {
         return wage * pieces;
     }
@@ -48,5 +47,10 @@ public class PieceWorker extends Employee {
         return String.format("Piece worker: %s%n%s%.2f%n%s%d",
                 super.toString(), "wage per piece: $", getWage(),
                 "Pieces made: ", getPieces());
+    }
+
+    @Override
+    public double getPaymentAmount() {
+        return earnings();
     }
 }
