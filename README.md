@@ -14,6 +14,7 @@ My solutions to some exercises in the textbook above as well as class exercises,
 - [Chapter 9- Object-Oriented Programming: Inheritance](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter9)
 - [Chapter 10- Object-Oriented Programming: Polymorphism and Interfaces](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter10)
 - [Chapter 11- Exception Handling: A Deeper Look](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter11)
+- [Chapter 14- Strings, Characters and Regular Expressions](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter14)
 
 ## Others
 - [Take home assignments](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/assignments)
