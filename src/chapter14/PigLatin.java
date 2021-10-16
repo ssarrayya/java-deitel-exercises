@@ -16,7 +16,12 @@ sentence. Keep a running display of all the converted sentences in a text area.
 import java.util.Scanner;
 
 public class PigLatin {
-    public static String[] splitWord(String sentence) {
+    /**
+     * Splits a sentence into words
+     * @param sentence word to split
+     * @return array of words in sentence
+     */
+    public static String[] splitSentence(String sentence) {
         return sentence.split(" ");
     }
 
@@ -34,7 +39,7 @@ public class PigLatin {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a sentence you want to translate:");
         String sentence = scanner.nextLine();
-        String[] tokens = splitWord(sentence);
+        String[] tokens = splitSentence(sentence);
         for(String word : tokens) {
             System.out.print(printLatinWord(word) + " ");
         }
