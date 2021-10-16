@@ -39,6 +39,7 @@ public class PigLatin {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a sentence you want to translate:");
         String sentence = scanner.nextLine();
+        scanner.close();
         String[] tokens = splitSentence(sentence);
         for(String word : tokens) {
             System.out.print(printLatinWord(word) + " ");
