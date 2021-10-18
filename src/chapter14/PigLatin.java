@@ -26,12 +26,17 @@ public class PigLatin {
     }
 
     public static StringBuilder printLatinWord(String word) {
-        char[] wordArray = word.toCharArray();
         StringBuilder latinWord = new StringBuilder();
-        for(int i = 1; i < wordArray.length; i++) {
-            latinWord.append(wordArray[i]);
-        }
-        latinWord.append(wordArray[0]).append("ay");
+
+        //1st method
+//        char[] wordArray = word.toCharArray();
+//        for(int i = 1; i < wordArray.length; i++) {
+//            latinWord.append(wordArray[i]);
+//        }
+//        latinWord.append(wordArray[0]).append("ay");
+
+        //2nd method
+        latinWord.append(word.substring(1)).append(word.charAt(0)).append("ay");
         return latinWord;
     }
 
