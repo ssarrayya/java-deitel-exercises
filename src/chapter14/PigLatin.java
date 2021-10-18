@@ -25,7 +25,7 @@ public class PigLatin {
         return sentence.split(" ");
     }
 
-    public static StringBuilder printLatinWord(String word) {
+    public static String printLatinWord(String word) {
         StringBuilder latinWord = new StringBuilder();
         latinWord.ensureCapacity(100);
 
@@ -38,7 +38,7 @@ public class PigLatin {
 
         //2nd method
         latinWord.append(word.substring(1)).append(word.charAt(0)).append("ay");
-        return latinWord;
+        return latinWord.toString();
     }
 
     public static void main(String[] args) {
