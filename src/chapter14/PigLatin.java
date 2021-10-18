@@ -27,6 +27,7 @@ public class PigLatin {
 
     public static StringBuilder printLatinWord(String word) {
         StringBuilder latinWord = new StringBuilder();
+        latinWord.ensureCapacity(100);
 
         //1st method
 //        char[] wordArray = word.toCharArray();
