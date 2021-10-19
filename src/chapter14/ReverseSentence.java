@@ -19,12 +19,11 @@ public class ReverseSentence {
         return scanner.nextLine();
     }
 
-    public static String reverseString(String word) {
-        char[] charArray = word.toCharArray();
+    public static String reverseSentence(String[] sentence) {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = charArray.length - 1; i >= 0; i--) {
-            sb.append(charArray[i]);
+        for (int i = sentence.length - 1; i >= 0; i--) {
+            sb.append(sentence[i]).append(" ");
         }
         return sb.toString();
     }
@@ -35,8 +34,6 @@ public class ReverseSentence {
 
         String[] sentenceArray = PigLatin.splitSentence(sentence);
 
-        for (String word : sentenceArray) {
-            System.out.print(reverseString(word) + " ");
-        }
+        System.out.print(reverseSentence(sentenceArray));
     }
 }
