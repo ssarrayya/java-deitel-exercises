@@ -8,10 +8,14 @@ the line with String method split and outputs the tokens in reverse order. Use s
 import java.util.Scanner;
 
 public class ReverseSentence {
-    public static String collectSentence() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a sentence");
+    private static final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Collects a sentence from user
+     * @return the sentence
+     */
+    public static String collectSentence() {
+        System.out.println("Enter a sentence");
         return scanner.nextLine();
     }
 
@@ -27,6 +31,7 @@ public class ReverseSentence {
 
     public static void main(String[] args) {
         String sentence = collectSentence();
+        scanner.close();
 
         String[] sentenceArray = PigLatin.splitSentence(sentence);
 
