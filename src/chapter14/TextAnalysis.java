@@ -85,13 +85,27 @@ public class TextAnalysis {
     }
 
     public static void sameWordOccurrence() {
+        System.out.println("Enter a text:");
+        String text = scanner.nextLine();
+        System.out.printf("%s%15s%n", "Words", "Occurrences");
+        String[] tokens = text.split(" ");
 
+        for (int i = 0; i < tokens.length; i++) {
+            int counter = 0;
+            for (int j = i + 1; j < tokens.length; j++) {
+                if (tokens[i].equals(tokens[j])) {
+                    counter++;
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
         alphabetOccurrence();
         System.out.println();
         wordsGroupedByCharacterLength();
+        System.out.println();
+        sameWordOccurrence();
         scanner.close();
     }
 }
