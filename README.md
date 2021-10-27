@@ -15,6 +15,7 @@ My solutions to some exercises in the textbook above as well as class exercises,
 - [__Chapter 10__- Object-Oriented Programming: Polymorphism and Interfaces](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter10)
 - [__Chapter 11__- Exception Handling: A Deeper Look](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter11)
 - [__Chapter 14__- Strings, Characters and Regular Expressions](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter14)
+- [__Chapter 15__- Files, Streams and Object Serialization](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/chapter15)
 
 ### Others
 - [__Take home assignments__](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/assignments)
