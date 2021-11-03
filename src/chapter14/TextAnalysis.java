@@ -89,7 +89,7 @@ public class TextAnalysis {
     public static void sameWordOccurrence() {
         System.out.println("Enter a text:");
         String text = scanner.nextLine().replaceAll("[^a-zA-Z0-9']", " ").toLowerCase();
-        text = text.replaceAll("  ", " ");
+        text = text.replaceAll(" {2}", " ");
         System.out.printf("%s%35s%n", "Words", "Occurrences");
 
         String[] tokens = text.split("\\s");
