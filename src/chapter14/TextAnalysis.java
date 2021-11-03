@@ -23,7 +23,9 @@ methods for analyzing texts with a computer.
     contain the word “to” three times, the word “be” two times, the word “or” once, etc.
  */
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class TextAnalysis {
     private static Scanner scanner = new Scanner(System.in);
@@ -86,26 +88,35 @@ public class TextAnalysis {
 
     public static void sameWordOccurrence() {
         System.out.println("Enter a text:");
-        String text = scanner.nextLine();
-        System.out.printf("%s%15s%n", "Words", "Occurrences");
-        String[] tokens = text.split(" ");
+        String text = scanner.nextLine().replaceAll("[^a-zA-Z0-9']", " ").toLowerCase();
+        text = text.replaceAll("  ", " ");
+        System.out.printf("%s%35s%n", "Words", "Occurrences");
+
+        String[] tokens = text.split("\\s");
+
+        Set<String> checkedWords = new HashSet<>();
 
         for (int i = 0; i < tokens.length; i++) {
-            int counter = 0;
-            for (int j = i + 1; j < tokens.length; j++) {
-                if (tokens[i].equals(tokens[j])) {
-                    counter++;
+            int counter = 1;
+            if(!(checkedWords.contains(tokens[i]))) {
+                checkedWords.add(tokens[i]);
+                for (int j = i + 1; j < tokens.length; j++) {
+                    if (tokens[i].equals(tokens[j])) {
+                        counter++;
+                        j++;
+                    }
                 }
+                System.out.printf("%-10s%22s%n", tokens[i], counter);
             }
         }
     }
 
     public static void main(String[] args) {
-        alphabetOccurrence();
-        System.out.println();
-        wordsGroupedByCharacterLength();
-        System.out.println();
-        sameWordOccurrence();
-        scanner.close();
+//        alphabetOccurrence();
+//        System.out.println();
+//        wordsGroupedByCharacterLength();
+//        System.out.println();
+          sameWordOccurrence();
+          scanner.close();
     }
 }
