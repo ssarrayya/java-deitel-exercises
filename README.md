@@ -22,3 +22,4 @@ My solutions to some exercises in the textbook above as well as class exercises,
 - [__Class katas and exercises__](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/classtests)
 - [__Trivia with Cohort 6__](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/extras)
 - [__Tic tac toe project with Chibuzo__](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/tictactoe)
+- [__Codewars solutions__](https://github.com/oluwadamiloju/java-deitel-exercises/tree/main/src/codewars)
