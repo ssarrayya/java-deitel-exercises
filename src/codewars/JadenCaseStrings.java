@@ -20,8 +20,7 @@ Link to Jaden's former Twitter account @officialjaden via archive.org
 public class JadenCaseStrings {
     public static String toJadenCase(String phrase) {
         // TODO put your code below this comment
-        if(phrase == null) return null;
-        if(phrase.equals("")) return null;
+        if(phrase == null || phrase.equals("")) return null;
         else {
             String[] words = phrase.split(" ");
             StringBuilder sb = new StringBuilder();
