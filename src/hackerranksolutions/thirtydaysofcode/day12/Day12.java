@@ -1,8 +1,9 @@
-package hackerranksolutions.thirtydaysofcode;
+package hackerranksolutions.thirtydaysofcode.day12;
 
 import java.util.Scanner;
 
 /*
+Inheritance
 Link to problem: https://www.hackerrank.com/challenges/30-inheritance/problem
  */
 public class Day12 {
