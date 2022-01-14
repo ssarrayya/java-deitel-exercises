@@ -82,11 +82,18 @@ public class FileMatch {
             output = new Formatter("newmast.txt");
             output2 = new Formatter("log.txt");
 
-            for (int i = 0; i < lines; i++) {
-                for (int j = 0; j < lines2; j++) {
-                    if (accNum[i] == trAccNum[j]) {
-                        output.format("%d %s %.2f%n", accNum[i], fullName[i], accBal[i] + trAmnt[j]);
-                        break;
+            if(lines == lines2) {
+                for (int i = 0; i < lines; i++) {
+                    for (int j = 0; j < lines2; j++) {
+                        if (accNum[i] == trAccNum[j]) {
+                            output.format("%d %s %.2f%n", accNum[i], fullName[i], accBal[i] + trAmnt[i]);
+                            break;
+                        } else if (accNum[i] != trAccNum[i]) {
+                            output.format("%d %s %.2f%n", accNum[i], fullName[i], accBal[i]);
+                            output2.format("%s %d%n", "Unmatched transaction record for account number",
+                                    trAccNum[i]);
+                            break;
+                        }
                     }
                 }
             }
