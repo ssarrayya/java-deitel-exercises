@@ -12,7 +12,7 @@ public class CreateTrFile {
 
     public static void openFile() {
         try {
-            output = new Formatter("src\\chapter15\\filematching\\files\\trans.txt");
+            output = new Formatter("trans.txt");
         }  catch (SecurityException e) {
             System.err.println("Write permission denied. Terminating.");
             System.exit(1);

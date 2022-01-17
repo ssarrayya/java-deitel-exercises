@@ -23,7 +23,7 @@ public class FileMatch {
     private static int lines2 = 0;
 
     public static void openAccountFile() {
-        Path path = Paths.get("src\\chapter15\\filematching\\files\\oldmast.txt");
+        Path path = Paths.get("oldmast.txt");
 
         try {
             scannerA = new Scanner(path);
@@ -38,7 +38,7 @@ public class FileMatch {
     }
 
     public static void openTransactionRecordFile() {
-        Path path = Paths.get("src\\chapter15\\filematching\\files\\trans.txt");
+        Path path = Paths.get("trans.txt");
         try {
             scannerB = new Scanner(path);
             lines2 = (int) Files.lines(path).count();
@@ -79,8 +79,8 @@ public class FileMatch {
 
     public static void compare() {
         try {
-            output = new Formatter("src\\chapter15\\filematching\\files\\newmast.txt");
-            output2 = new Formatter("src\\chapter15\\filematching\\files\\log.txt");
+            output = new Formatter("newmast.txt");
+            output2 = new Formatter("log.txt");
 
             if(lines == lines2) {
                 for (int i = 0; i < lines; i++) {

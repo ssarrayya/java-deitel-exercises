@@ -6,14 +6,14 @@ import java.util.FormatterClosedException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class CreateTrFile {
+public class CreateAccountFile {
     private static Formatter output;
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void openFile() {
         try {
-            output = new Formatter("src\\chapter15\\filematching\\files\\trans.txt");
-        }  catch (SecurityException e) {
+            output = new Formatter("oldmast.txt");
+        } catch (SecurityException e) {
             System.err.println("Write permission denied. Terminating.");
             System.exit(1);
         } catch (FileNotFoundException e) {
@@ -22,14 +22,14 @@ public class CreateTrFile {
         }
     }
 
-    private static void addRecords() {
+    public static void addRecords() {
         System.out.printf("%s%n%s%n* ",
-                "Enter account number, transaction amount",
+                "Enter account number, first name, last name and account balance",
                 "Enter end-of-file indicator to end input.");
 
         while (scanner.hasNext()) {
-            try {
-                output.format("%d %.2f%n", scanner.nextInt(), scanner.nextDouble());
+            try{
+                output.format("%d %s %s %.2f%n", scanner.nextInt(), scanner.next(), scanner.next(), scanner.nextDouble());
             } catch (FormatterClosedException e) {
                 System.err.println("Error writing to file. Terminating.");
                 break;

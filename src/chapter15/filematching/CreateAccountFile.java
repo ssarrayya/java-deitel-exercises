@@ -12,7 +12,7 @@ public class CreateAccountFile {
 
     public static void openFile() {
         try {
-            output = new Formatter("oldmast.txt");
+            output = new Formatter("src\\chapter15\\filematching\\files\\oldmast.txt");
         } catch (SecurityException e) {
             System.err.println("Write permission denied. Terminating.");
             System.exit(1);
