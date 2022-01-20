@@ -1,5 +1,10 @@
 package hackerranksolutions.thirtydaysofcode.day15;
 
+/*
+LinkedList
+Link to problem: https://www.hackerrank.com/challenges/30-linked-list/problem?isFullScreen=true
+*/
+
 import java.util.Scanner;
 
 public class Day15 {
