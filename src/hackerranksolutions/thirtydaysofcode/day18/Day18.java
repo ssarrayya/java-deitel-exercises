@@ -1,5 +1,10 @@
 package hackerranksolutions.thirtydaysofcode.day18;
 
+/*
+Queues and Stacks
+Link to problem: https://www.hackerrank.com/challenges/30-queues-stacks/problem?isFullScreen=true
+ */
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
