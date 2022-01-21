@@ -1,5 +1,10 @@
 package hackerranksolutions.thirtydaysofcode.day19;
 
+/*
+Interfaces
+Link to problem: https://www.hackerrank.com/challenges/30-interfaces/problem?isFullScreen=true
+*/
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
