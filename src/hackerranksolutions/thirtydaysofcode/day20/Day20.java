@@ -1,2 +1,5 @@
-package hackerranksolutions.thirtydaysofcode.day20;public class Day20 {
+package hackerranksolutions.thirtydaysofcode.day20;
+
+public class Day20 {
+
 }

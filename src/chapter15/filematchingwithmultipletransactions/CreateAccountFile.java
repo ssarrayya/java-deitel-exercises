@@ -1,4 +1,4 @@
-package chapter15.filematching;
+package chapter15.filematchingwithmultipletransactions;
 
 import java.io.FileNotFoundException;
 import java.util.Formatter;
@@ -12,7 +12,7 @@ public class CreateAccountFile {
 
     public static void openFile() {
         try {
-            output = new Formatter("oldmast.txt");
+            output = new Formatter("src\\chapter15\\filematchingwithmultipletransactions\\files\\oldmast.txt");
         } catch (SecurityException e) {
             System.err.println("Write permission denied. Terminating.");
             System.exit(1);

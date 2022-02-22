@@ -1,6 +1,22 @@
-package chapter15.filematching;
+package chapter15.filematchingwithmultipletransactions;
 
 import java.io.Serializable;
+
+/*
+15.5 (File Matching with Multiple Transactions) It’s possible (and actually common) to have several
+transaction records with the same record key. This situation occurs, for example, when a customer makes
+several purchases and cash payments during a business period. Rewrite your accounts receivable
+file-matching program from Exercise 15.4 to provide for the possibility of handling several transaction
+records with the same record key. Modify the test data of CreateData.java to include the additional
+transaction records in Fig. 15.16.
+
+                Account number  Dollar amount
+                300             83.89
+                700             80.78
+                700             1.53
+
+                Fig. 15.16 | Additional transaction records
+ */
 
 public class Account implements Serializable {
     private int account;

@@ -1,4 +1,4 @@
-package chapter15.filematching;
+package chapter15.filematchingwithmultipletransactions;
 
 public class TransactionRecord {
     private int accountNumber;
