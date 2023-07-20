@@ -1,6 +1,6 @@
 # Java how to program, 10th edition - Early Objects Version
 
-My solutions to some exercises in the textbook above as well as class exercises, tests and extra class trivias among my cohort mates
+My solutions to some exercises in the textbook above as well as class exercises, tests and extra class trivias among my cohort mates. If you'd like to contribute or correct something, feel free to make a pull request, clearly stating the problem!
 
 ## Chapters
 - __Chapter 1__- Introduction to Computers, the Internet and Java
